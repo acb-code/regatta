@@ -1,0 +1,1 @@
+# Overview\nThis folder contains notes on algorithms implemented in `regatta`.
