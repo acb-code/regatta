@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Algorithmic Game Theory and Strategic Interaction — from fundamentals to frontier methods."
 readme = "README.md"
 authors = [
-    { name = "Alexander Braafladt", email = "alex@braafladt.com" }
+    { name = "Alexander Braafladt" }
 ]
 license = { text = "MIT" }
 requires-python = ">=3.9"
@@ -19,11 +19,12 @@ dependencies = [
     "pandas",
     "jax",
     "torch",
-    "notebook",
+    "notebook"
 ]
 
 [project.optional-dependencies]
 dev = ["pytest", "black", "ruff", "mypy"]
 
-[tool.setuptools.packages.find]
-where = ["regatta"]
+[tool.setuptools]
+# This line tells setuptools explicitly where the package is
+packages = ["regatta"]
