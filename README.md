@@ -18,10 +18,14 @@ It draws inspiration from DeepMind’s work on **PSRO**, **AlphaRank**, and **De
 ### 📂 Structure
 ```
 regatta/
-├── core/          # Foundational algorithms and data structures
-├── learning/      # Learning and regret-minimization algorithms
-├── experiments/   # Jupyter experiments and reproductions
-└── docs/          # Notes, references, and reproductions
+├── docs/              # Notes, references, and reproductions
+├── regatta/
+│   ├── core/          # Foundational algorithms and data structures
+│   ├── learning/      # Learning and regret-minimization algorithms
+│   ├── experiments/   # Jupyter experiments and reproductions
+│   └── utils/         # Shared helpers and common utilities
+├── pyproject.toml     # Project packaging and dependency configuration
+└── requirements.txt   # Lightweight dependency pinning for quick installs
 ```
 
 ---
