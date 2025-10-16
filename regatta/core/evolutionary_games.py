@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def replicator_dynamics(payoff_matrix, x, dt=0.01, steps=1000):
     """
     Simulate discrete-time replicator dynamics for a symmetric game.
@@ -18,6 +19,9 @@ def replicator_dynamics(payoff_matrix, x, dt=0.01, steps=1000):
     for _ in range(steps):
         fitness = payoff_matrix @ x
         avg_fitness = x @ fitness
+        if np.isclose(avg_fitness, 0.0):
+            # No selection pressure; stop to avoid division by zero.
+            break
         x = x * (fitness / avg_fitness)
         x /= np.sum(x)
     return x
