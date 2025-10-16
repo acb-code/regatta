@@ -41,6 +41,45 @@ pip install -e ".[dev]"
 
 ---
 
+### 🧰 Conda Environment Setup
+
+You can create a dedicated Conda environment for `regatta` to keep dependencies isolated.
+
+```bash
+# Create environment
+conda create -n regatta python=3.10 -y
+
+# Activate environment
+conda activate regatta
+
+# Install dependencies
+pip install -e .
+```
+
+For development (with testing, linting, etc.):
+```bash
+pip install -e ".[dev]"
+```
+
+Alternatively, you can use the `requirements.txt` file directly:
+```bash
+pip install -r requirements.txt
+```
+
+To verify setup:
+```bash
+python -m pytest -q
+```
+
+Optional (if you prefer Jupyter):
+```bash
+# Register the environment as a Jupyter kernel
+python -m ipykernel install --user --name regatta --display-name "regatta"
+```
+Then select the **“regatta”** kernel in your Jupyter notebooks under `regatta/experiments/`.
+
+---
+
 ### 📚 References
 - **Shoham & Leyton-Brown (2008)** – *Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations*
 - **Balduzzi et al. (2018)** – *PSRO: Policy-Space Response Oracles*
